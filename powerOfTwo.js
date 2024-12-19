@@ -1,3 +1,5 @@
+/* Here we are checking if a number is a power of 2 or not. */
+
 function powerOfTwo(n) {
     return n > 0 && (n & (n - 1)) === 0;
 }
