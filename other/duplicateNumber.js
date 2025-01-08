@@ -30,5 +30,6 @@ function findDuplicate(nums) {
 
 /* 
     Time complexity and space complexity of both functions are O(n) but solution 
-    one is more readable while solution two is more efficient in terms of space because it uses an object.
+    one is more readable while solution two is more efficient in terms of space 
+    complexity because it uses an object.
 */
