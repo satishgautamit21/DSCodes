@@ -4,6 +4,9 @@ function detectCycle(head) {
     while (fast && fast.next) {
         slow = slow.next;
         fast = fast.next.next;
+
+        // Cycle found now find the starting point
+        // Here slow and fast will meet at the starting point of the cycle
         if (slow === fast) {
             let p1 = head;
             let p2 = slow;
