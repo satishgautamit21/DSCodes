@@ -1,6 +1,8 @@
 function threesum(nums) {
     nums.sort((a, b) => a - b);
     const result = []
+
+    // to avoid duplicate triplets
     for (let i = 0; i < nums.length - 2; i++) {
 
         // to avoid duplicate triplets
