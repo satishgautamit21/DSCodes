@@ -1,3 +1,9 @@
+/* 
+The total time complexity is O(n * m), where:
+
+n is the number of strings in the array.
+m is the length of the longest string in the array.
+*/
 function longestCommonPrefix(arr){
     let prefix = arr[0];
 
