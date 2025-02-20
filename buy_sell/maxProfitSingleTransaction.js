@@ -12,7 +12,7 @@ function maxProfit(prices) {
 }
 
 
-console.log(maxProfit([7,1,5,3,6,4])); 
+console.log(maxProfit([7,1,5,3,6,4])); // 5
 // here in 1st iteration min price is 1 and max profit is 6-1 = 5
 // in 2nd iteration min price is 1 and max profit is 6-1 = 5
 // in 3rd iteration min price is 1 and max profit is 5-1 = 4

@@ -1,5 +1,5 @@
 class IndexPair {
-   getIndexPairWithTargetSum(array, targetSum): number[] {
+   getIndexPairWithTargetSum(array, targetSum) {
        const seen = {};
        for (let i = 0; i < array.length; i++) {
            const complement = targetSum - array[i];
