@@ -28,4 +28,4 @@ function candidateVoteGreaterthanN_by_two(array) {
 }
 
 
-console.log(candidateVoteGreaterthanN_by_two([2, 2, 1, 1, 1, 2, 2]));
+console.log(candidateVoteGreaterthanN_by_two([2, 2, 1, 1, 1, 2, 2])); // Output: 2

@@ -39,4 +39,6 @@ function candidateVoteGreaterthanN_by_three(array) {
     });
     return result.length === 0 ? -1 : result;
 }
+
+console.log(candidateVoteGreaterthanN_by_three([2, 2, 1, 1, 1, 2, 2])); // 
    
