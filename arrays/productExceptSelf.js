@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/product-of-array-except-self/
+
 function productExceptSelf(nums) {
 
     // we will create an array of size nums.length and fill it with 1

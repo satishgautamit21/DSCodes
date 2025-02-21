@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
 function removeDuplicatesFromUnSortedArray(arr) {
     const seen = {};
     let index = 0;

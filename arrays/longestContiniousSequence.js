@@ -1,3 +1,5 @@
+// problem: https://leetcode.com/problems/longest-consecutive-sequence/
+
 function longestConsecutive(nums) {
     if (nums.length === 0) return 0;
 

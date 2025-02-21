@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/find-pivot-index/
+
 function pivotIndex(nums) {
     let leftSum = 0;
     let totalSum = nums.reduce((a, b) => a + b, 0);

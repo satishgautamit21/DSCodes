@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/third-maximum-number/
 function getThirdMax(nums) {
     let first = -Infinity;
     let second = -Infinity;

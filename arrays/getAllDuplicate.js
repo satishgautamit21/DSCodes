@@ -1,3 +1,6 @@
+// problem statement
+// find-all-duplicates-in-an-array/
+
 function getAllDuplicates(nums) {
     const seen = new Set();
     const duplicates = [];

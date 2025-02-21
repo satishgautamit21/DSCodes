@@ -1,3 +1,5 @@
+// Given an array and a value, remove all occurrences of that value in place and return the new length.
+
 function removeAllOccurenceInPlace(arr, val) {
     let index = 0;
     for (let i = 0; i < arr.length; i++) {

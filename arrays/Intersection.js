@@ -1,3 +1,5 @@
+// find common elements in two arrays excluding duplicates
+
 function getIntersection(nums1, nums2) {
     const set1 = new Set(nums1);
     const set2 = new Set(nums2);

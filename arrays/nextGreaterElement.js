@@ -1,3 +1,7 @@
+// Next Greater Element
+// Given two arrays nums1 and nums2, where nums1 is a subset of nums2. 
+// Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
+
 function nextGreaterElement(nums1, nums2) {
     let stack = [];
     let nextGreater = new Map();

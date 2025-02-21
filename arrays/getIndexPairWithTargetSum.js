@@ -1,3 +1,6 @@
+// problem statement
+// index-of pair with target sum
+
 class IndexPair {
    getIndexPairWithTargetSum(array, targetSum) {
        const seen = {};

@@ -1,3 +1,6 @@
+// problem statement
+// pair-with-target-sum
+
 function getPairWithTargetSum(array, targetSum) {
     const seen = new Set();
     for (let i = 0; i < array.length; i++) {
