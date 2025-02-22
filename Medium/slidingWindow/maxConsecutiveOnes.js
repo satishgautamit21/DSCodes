@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/max-consecutive-ones/
 function maxConsecutiveOnes(nums) {
     let max = 0;
     let count = 0;
