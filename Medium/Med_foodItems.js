@@ -1,3 +1,5 @@
+// Problem Statement : https://www.hackerrank.com/challenges/food-items/problem
+
 function foodItems(N, M, K, V) {
     if (N < K) return -1; // Not enough food items to form a valid meal
 
