@@ -1,3 +1,5 @@
+// implement queue using two stacks
+
 function implementQueueUsingTwoStacks() {
     const stack1 = []
     const stack2 = []
