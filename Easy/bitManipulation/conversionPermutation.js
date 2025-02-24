@@ -15,4 +15,4 @@ function conversionPermutation(n) {
     return smallest
 }
 
-console.log(conversionPermutation(3))
+console.log(conversionPermutation(3))  // 10
