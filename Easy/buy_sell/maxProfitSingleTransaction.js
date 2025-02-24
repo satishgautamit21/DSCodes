@@ -11,14 +11,8 @@ function maxProfit(prices) {
     return maxProfit;
 }
 
-
-console.log(maxProfit([7,1,5,3,6,4])); // 5
-// here in 1st iteration min price is 1 and max profit is 6-1 = 5
-// in 2nd iteration min price is 1 and max profit is 6-1 = 5
-// in 3rd iteration min price is 1 and max profit is 5-1 = 4
-// in 4th iteration min price is 1 and max profit is 6-1 = 5
-// in 5th iteration min price is 1 and max profit is 4-1 = 3
-// in 6th iteration min price is 1 and max profit is 4-1 = 3
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // Output: 5 (Buy at 1, Sell at 6)
+console.log(maxProfit([7, 6, 4, 3, 1]));    // Output: 0 (No profit possible)
 
 
 // max profit in single transaction would be the difference between the max and min price

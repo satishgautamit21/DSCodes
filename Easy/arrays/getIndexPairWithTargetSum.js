@@ -3,13 +3,13 @@
 
 class IndexPair {
    getIndexPairWithTargetSum(array, targetSum) {
-       const seen = {};
+       const seen = new Map();
        for (let i = 0; i < array.length; i++) {
            const complement = targetSum - array[i];
-           if (complement in seen) {
-               return [seen[complement], i];
+           if (seen.has(complement)) {
+               return [seen.get(complement), i];
            }
-           seen[array[i]] = i;
+           seen.set(array[i], i);
        }
        return [-1, -1];
    }
