@@ -23,9 +23,9 @@ function climbStairs(n) {
         return 4;
     }
     let res = [1, 2, 4];
-    for(let i = 4; i <= n; i++) {
+    for(let i = 3; i < n; i++) {
         res[i] = res[i - 1] + res[i - 2] + res[i - 3];
     }
-    return res[n];
+    return res[n-1];
 } 
 */
