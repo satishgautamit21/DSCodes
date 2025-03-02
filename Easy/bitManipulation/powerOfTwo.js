@@ -1,6 +1,11 @@
 /* Here we are checking if a number is a power of 2 or not. */
 
 function powerOfTwo(n) {
+    // bitwise & do multiplication of binary number digit
+    // 1&1 = 1
+    // 1&0 = 0
+    // 0&0 = 0
+    // 0&1 = 0 
     return n > 0 && (n & (n - 1)) === 0;
 }
 

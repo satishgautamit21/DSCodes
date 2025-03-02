@@ -3,11 +3,13 @@
 
 function getPairWithTargetSum(array, targetSum) {
     const seen = new Set();
-    for (let i = 0; i < array.length; i++) {
-        const complement = targetSum - array[i];
+    for (let item of array) {
+        const complement = targetSum - item;
         if (seen.has(complement)) {
-            return [complement, array[i]];
+            return [complement, item];
         }
-        seen.add(array[i]);
+        seen.add(item);
     }
+    return [-1, -1];
 }
+   
