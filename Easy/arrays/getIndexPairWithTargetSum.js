@@ -1,19 +1,32 @@
-// problem statement
-// index-of pair with target sum
+// solution 1 using object
 
-class IndexPair {
-   getIndexPairWithTargetSum(array, targetSum) {
-       const seen = new Map();
-       for (let i = 0; i < array.length; i++) {
-           const complement = targetSum - array[i];
-           if (seen.has(complement)) {
-               return [seen.get(complement), i];
-           }
-           seen.set(array[i], i);
-       }
-       return [-1, -1];
-   }
+function getIndexPairWithTargetSum(arr, target) {
+    const obj = {}
+    for (let i = 0; i < arr.length; i++) {
+        let diff = target - arr[i]
+        if (diff in obj) {
+            return [obj[diff], i]
+        }
+        obj[arr[i]] = i
+    }
+    return []
 }
 
-const indexPair = new IndexPair();
-console.log(indexPair.getIndexPairWithTargetSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15)); // [6,7]
+// solution 2 using sorting and two pointer
+
+function getIndexPairWithTargetSum(arr, target) {
+    arr.sort((a, b) => a - b);
+    let left = 0;
+    let right = arr.length - 1;
+    while (left < right) {
+        let sum = arr[left] + arr[right];
+        if (sum === target) {
+            return [left, right];
+        } else if (sum < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+    return [];
+}
