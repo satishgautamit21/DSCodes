@@ -1,38 +1,35 @@
-function threesum(nums) {
-    nums.sort((a, b) => a - b);
-    const result = []
-
-    // to avoid duplicate triplets
-    for (let i = 0; i < nums.length - 2; i++) {
-
-        // to avoid duplicate triplets
-        if (i > 0 && nums[i] === nums[i - 1]) {
-            continue;
-        }
-        let left = i + 1;
-        let right = nums.length - 1;
-        while (left < right) {
-            const sum = nums[i] + nums[left] + nums[right]
-            if (sum < 0) {
-                left++;
-            } else if (sum > 0) {
-                right--
+function threeSum(arr, target) {
+    if (arr.length < 3) return [];
+    
+    arr.sort((a, b) => a - b);
+    
+    for (let i = 0; i < arr.length - 2; i++) {
+        if (i > 0 && arr[i] === arr[i - 1]) continue; // Skip duplicates
+        
+        let j = i + 1;
+        let k = arr.length - 1;
+        
+        while (j < k) {
+            let sum = arr[i] + arr[j] + arr[k];
+            
+            if (sum === target) {
+                return [arr[i], arr[j], arr[k]];
+            } 
+            
+            if (sum > target) {
+                k--;
             } else {
-                result.push([nums[i], nums[left], nums[right]])
-                left++;
-                right--;
-
-                // to avoid duplicate triplets
-                while (left < right && nums[left] === nums[left - 1]) {
-                    left++;
-                }
-
-                // to avoid duplicate triplets
-                while (left < right && nums[right] === nums[right + 1]) {
-                    right--;
-                }
+                j++;
             }
+            
+            // Skip duplicates for j and k
+            while (j < k && arr[j] === arr[j - 1]) j++;
+            while (j < k && arr[k] === arr[k + 1]) k--;
         }
     }
-    return result
+    
+    return [];
 }
+
+console.log("op ", threeSum([1, 2, 3, 4, 5, 6, 7], 14)); // Output: 
+console.log("op ", threeSum([1, 2, 3, 4, 5, 6, 7], 15));
