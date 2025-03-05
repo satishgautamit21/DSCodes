@@ -14,19 +14,21 @@ function threeSum(arr, target) {
             
             if (sum === target) {
                  result.push([arr[i], arr[j], arr[k]]);
-            } 
-            
-            if (sum > target) {
+
+                // Move j and k after finding a valid triplet
+                j++;
+                k--;
+
+                // Skip duplicates for j and k
+                // arr = [-4, -1, -1, 0, 1, 2, 2, 2]; here j will cross k and hence not behave
+                // properly if j < k condtion misssed
+                while (j < k && arr[j] === arr[j - 1]) j++;
+                while (j < k && arr[k] === arr[k + 1]) k--;
+            } else if (sum > target) {
                 k--;
             } else {
                 j++;
             }
-            
-            // Skip duplicates for j and k
-            // arr = [-4, -1, -1, 0, 1, 2, 2, 2]; here j will cross k and hence not behave
-            // properly if j < k condtion misssed
-            while (j < k && arr[j] === arr[j - 1]) j++;
-            while (j < k && arr[k] === arr[k + 1]) k--;
         }
     }
     
