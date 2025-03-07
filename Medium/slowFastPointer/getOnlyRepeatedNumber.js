@@ -1,17 +1,15 @@
+// 287. Find the Duplicate Number
 // Get only repeated number in an array of N+1 integers having digit from 1 to N
-
 
 function getOnlyRepeatedNumber(arr) {
     let slow = arr[0];
     let fast = arr[0];
-    console.log("slow ", slow, "fast ", fast, arr);
         
     // Here do -while is preffered over while loop because it will 
     // execute at least once before comparing slow and fast
     do {
         slow = arr[slow];
         fast = arr[arr[fast]];
-        console.log("slow ", slow, "fast ", fast);
     } while (slow !== fast);
 
     // this loop will find the repeated number

@@ -1,3 +1,5 @@
+// #121 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
 function maxProfit(prices) {
     let minPrice = Infinity;
     let maxProfit = 0;
