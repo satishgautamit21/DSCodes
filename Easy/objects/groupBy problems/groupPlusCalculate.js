@@ -1,3 +1,5 @@
+// Here we are grouping by name and region and summing up the quantity
+
 function aggregate(arr) {
     const groupItems = {};
 
@@ -29,4 +31,10 @@ const products = [
     { name: "laptop", quantity: 1, region: "IN" }
 ]
 
-console.log(aggregate(products));
+console.log(aggregate(products)); 
+// Output: [
+//     { name: "laptop", quantity: 3, region: ["US", "IN"] },
+//     { name: "phone", quantity: 3, region: ["IN"] },
+//     { name: "tablet", quantity: 2, region: ["CA", "UK"] }
+//   ]
+//]

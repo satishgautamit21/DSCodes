@@ -1,8 +1,20 @@
+// using hashMap
 function removeDublicatesByKey(arr) {
-    return arr.filter(
-        (item, index, self) => self.findIndex(t => t.id === item.id) === index
-    )
+    const map = new Map();
+    return arr.filter(item => {
+        if (!map.has(item.id)) {
+            map.set(item.id, true);
+            return true;
+        }
+        return false;
+    })
 }
+
+// using hashMap and map function
+function removeDublicatesByKey(arr) {
+   return [...new Map(arr.map(item => [item.id, item])).values()];
+}
+
 
 const input = [
     { id: 1, name: "John" },
