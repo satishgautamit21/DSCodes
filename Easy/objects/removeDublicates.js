@@ -10,12 +10,6 @@ function removeDublicatesByKey(arr) {
     })
 }
 
-// using hashMap and map function
-function removeDublicatesByKey(arr) {
-   return [...new Map(arr.map(item => [item.id, item])).values()];
-}
-
-
 const input = [
     { id: 1, name: "John" },
     { id: 2, name: "Jane" },

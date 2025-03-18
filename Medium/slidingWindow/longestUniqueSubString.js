@@ -44,3 +44,15 @@ function longestUniqueSubString(str) {
     }
     return max;
 }
+
+// Time complexity: O(n) 
+// Space complexity: O(n)
+
+
+/*
+    Key Difference:
+    Set-based solution removes elements dynamically, while
+    Map-based solution directly jumps left to avoid unnecessary deletions.
+    Both are efficient, but map-based is slightly more optimized since it avoids 
+    the repeated delete() operations in the while loop.
+*/

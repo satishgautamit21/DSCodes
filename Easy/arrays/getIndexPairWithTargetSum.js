@@ -1,3 +1,5 @@
+// #1 https://leetcode.com/problems/two-sum/
+
 // solution 1 using object
 
 function getIndexPairWithTargetSum(arr, target) {
@@ -11,6 +13,9 @@ function getIndexPairWithTargetSum(arr, target) {
     }
     return []
 }
+
+// Time complexity: O(n)
+// Space complexity: O(n) beacause of object of size n
 
 // solution 2 using sorting and two pointer
 
@@ -30,3 +35,12 @@ function getIndexPairWithTargetSum(arr, target) {
     }
     return [];
 }
+
+// Time complexity: O(nlogn)
+// Space complexity: O(1)
+
+/*
+ conlusion
+ solution 1 has time complexity of O(n) and space complexity of O(n)
+ solution 2 has time complexity of O(nlogn) and space complexity of O(1)
+*/

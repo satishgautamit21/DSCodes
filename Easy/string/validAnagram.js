@@ -1,3 +1,5 @@
+// #242 https://leetcode.com/problems/valid-anagram/
+
 function frequencyCounter(str) {
     const frequencyCounter = {};
     for (let char of str) {
@@ -22,3 +24,17 @@ function  validAnagram(s, t) {
     }
     return true;
 }
+
+/*
+    Here time complexity is O(n) where as space complexity is O(1) as english characters are 26 at max
+*/
+
+// solution 2 using sorting
+function validAnagram(s, t) {
+    if (s.length !== t.length) return false;
+    return s.split("").sort().join("") === t.split("").sort().join("")
+}
+
+/*
+    Here time complexity is O(nlogn) where as space complexity is O(1)
+*/
